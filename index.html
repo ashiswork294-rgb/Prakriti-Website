@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f0">
+  <meta name="description" content="A little introduction to Prakriti Sapkota.">
+  <title>Prakriti Sapkota · A Little About Me</title>
+  <style>
+    :root {
+      --cream: #fff8f0;
+      --paper: #fffdf9;
+      --peach: #f7c9b8;
+      --rose: #e98e91;
+      --pink: #fbe5e2;
+      --lavender: #eee8fa;
+      --mint: #e4f2e8;
+      --ink: #433b43;
+      --muted: #786d78;
+      --line: #f0e4dc;
+      --shadow: 0 18px 45px rgba(112, 77, 77, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 5% 8%, rgba(247, 201, 184, .35), transparent 24rem),
+        radial-gradient(circle at 96% 34%, rgba(238, 232, 250, .6), transparent 25rem),
+        var(--cream);
+      color: var(--ink);
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(1060px, calc(100% - 36px)); margin: 0 auto; }
+    header { padding: 22px 0; }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center; gap: 18px;
+    }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.1rem; }
+    .brand span { color: var(--rose); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; font-size: .92rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+
+    .hero {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 42px;
+      align-items: center; padding: 62px 0 76px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; border-radius: 999px;
+      background: var(--paper); border: 1px solid var(--line);
+      padding: 7px 13px; color: var(--muted); font-size: .85rem;
+    }
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: .99;
+      letter-spacing: -.07em; margin: 20px 0;
+    }
+    h1 em { color: #d97f84; font-style: normal; }
+    .hero p { max-width: 510px; color: var(--muted); font-size: 1.08rem; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .button {
+      display: inline-block; text-decoration: none; border-radius: 999px;
+      padding: 12px 19px; font-weight: 700; font-size: .94rem;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .primary { background: var(--ink); color: white; }
+    .secondary { background: white; border: 1px solid var(--line); }
+
+    .hero-art { position: relative; min-height: 350px; display: grid; place-items: center; }
+    .portrait-card {
+      width: min(100%, 350px); min-height: 340px; padding: 25px;
+      border-radius: 48% 48% 32px 32px; background: linear-gradient(145deg, #f8d8cb, #f6e7ee 65%, #e9e3fa);
+      box-shadow: var(--shadow); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center; position: relative;
+      overflow: hidden;
+    }
+    .portrait-card::before, .portrait-card::after {
+      content: ""; position: absolute; border: 1px solid rgba(255,255,255,.7);
+      border-radius: 50%; width: 220px; height: 220px;
+    }
+    .portrait-card::before { top: -115px; right: -80px; }
+    .portrait-card::after { bottom: -145px; left: -70px; width: 270px; height: 270px; }
+    .avatar {
+      width: 142px; height: 142px; display: grid; place-items: center;
+      background: rgba(255,255,255,.75); border: 7px solid rgba(255,255,255,.6);
+      border-radius: 50%; font-size: 4rem; margin-bottom: 18px; z-index: 1;
+    }
+    .portrait-card h2 { margin: 0; font-size: 1.7rem; letter-spacing: -.04em; z-index: 1; }
+    .portrait-card p { margin: 5px 0 0; color: #77636f; z-index: 1; }
+    .sparkle { position: absolute; font-size: 2rem; }
+    .s1 { top: 24px; left: 28px; } .s2 { top: 78px; right: 20px; font-size: 1.5rem; }
+    .s3 { bottom: 30px; right: 35px; font-size: 1.7rem; }
+
+    section { padding: 38px 0 58px; }
+    .section-heading { text-align: center; max-width: 600px; margin: 0 auto 28px; }
+    .section-heading .mini { color: #d27c82; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; }
+    h2.section-title { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.055em; line-height: 1.1; margin: 8px 0 12px; }
+    .section-heading p { margin: 0; color: var(--muted); }
+    .about-card {
+      background: rgba(255,253,249,.88); border: 1px solid var(--line);
+      border-radius: 28px; padding: clamp(23px, 5vw, 42px); box-shadow: var(--shadow);
+      display: grid; grid-template-columns: 72px 1fr; gap: 22px; align-items: start;
+    }
+    .icon-box { display: grid; place-items: center; width: 68px; height: 68px; border-radius: 22px; background: var(--pink); font-size: 2rem; }
+    .about-card h3 { margin: 0 0 8px; font-size: 1.3rem; }
+    .about-card p { margin: 0; color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 19px; }
+    .chip { background: #fff; border: 1px solid var(--line); padding: 7px 12px; border-radius: 999px; font-size: .88rem; }
+
+    .interest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+    .interest {
+      padding: 24px 19px; min-height: 174px; border-radius: 24px;
+      border: 1px solid rgba(100,70,70,.06); transition: transform .2s ease;
+    }
+    .interest:hover { transform: translateY(-4px); }
+    .interest:nth-child(1) { background: var(--pink); }
+    .interest:nth-child(2) { background: var(--lavender); }
+    .interest:nth-child(3) { background: var(--mint); }
+    .interest:nth-child(4) { background: #fff0d8; }
+    .interest .emoji { font-size: 2rem; }
+    .interest h3 { margin: 12px 0 5px; font-size: 1.08rem; }
+    .interest p { margin: 0; font-size: .9rem; color: var(--muted); }
+
+    .note {
+      text-align: center; padding: 35px 25px; border-radius: 28px;
+      background: linear-gradient(120deg, #f8ded6, #f0eafa); margin-top: 6px;
+    }
+    .note .big-heart { font-size: 2rem; }
+    .note h2 { margin: 6px 0; font-size: clamp(1.6rem, 4vw, 2.4rem); letter-spacing: -.04em; }
+    .note p { margin: 0 auto; max-width: 560px; color: var(--muted); }
+    .socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .socials a { text-decoration: none; background: rgba(255,255,255,.78); border: 1px solid rgba(255,255,255,.9); padding: 9px 15px; border-radius: 999px; font-size: .9rem; font-weight: 700; }
+    .socials a:hover { background: white; }
+    footer { text-align: center; padding: 28px 0 35px; color: var(--muted); font-size: .88rem; }
+    footer .heart { color: #d97f84; }
+
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 14px; }
+      .hero { grid-template-columns: 1fr; padding: 38px 0 48px; gap: 15px; }
+      .hero-art { min-height: 310px; }
+      .portrait-card { min-height: 300px; max-width: 320px; }
+      .interest-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: min(100% - 26px, 1060px); }
+      .interest-grid { gap: 10px; }
+      .interest { padding: 19px 14px; min-height: 165px; }
+      .about-card { grid-template-columns: 1fr; gap: 15px; }
+      .nav-links { font-size: .88rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" style="text-decoration:none">prakriti<span>.</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About me</a>
+        <a href="#interests">My interests</a>
+        <a href="#connect">Say hello</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero" id="home">
+        <div>
+          <span class="eyebrow">🌷 A little corner of the internet</span>
+          <h1>Hi, I'm<br><em>Prakriti!</em></h1>
+          <p>A Grade 9 student at Annapurna Secondary School. I love learning, having fun, dancing, and all the little things that make life special.</p>
+          <div class="buttons">
+            <a class="button primary" href="#about">Get to know me <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="#interests">Things I love ♡</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Decorative profile illustration">
+          <div class="portrait-card">
+            <span class="sparkle s1">✦</span><span class="sparkle s2">♡</span><span class="sparkle s3">✧</span>
+            <div class="avatar" aria-hidden="true">🌼</div>
+            <h2>Prakriti Sapkota</h2>
+            <p>Dreaming, learning & growing ✨</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-heading">
+          <div class="mini">A little about me</div>
+          <h2 class="section-title">Nice to meet you! 💗</h2>
+          <p>Here are a few little things that make me, me.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon-box" aria-hidden="true">🌸</div>
+          <div>
+            <h3>Just being myself</h3>
+            <p>I'm Prakriti, a Grade 9 student at Annapurna Secondary School. I'm on a journey of learning new things, making memories, enjoying my favorite activities, and discovering more about myself along the way. This little website is a small introduction to who I am and the things I love.</p>
+            <div class="chips">
+              <span class="chip">📚 Always learning</span>
+              <span class="chip">💃 Dance lover</span>
+              <span class="chip">☀️ Fun & good vibes</span>
+              <span class="chip">🌈 Being me</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interests">
+        <div class="section-heading">
+          <div class="mini">My favorite things</div>
+          <h2 class="section-title">A few things I love ✨</h2>
+          <p>Life is made of little moments, favorite hobbies, and things that make us smile.</p>
+        </div>
+        <div class="interest-grid">
+          <article class="interest">
+            <div class="emoji" aria-hidden="true">📚</div>
+            <h3>Study</h3>
+            <p>Learning new things and growing a little every day.</p>
+          </article>
+          <article class="interest">
+            <div class="emoji" aria-hidden="true">🎉</div>
+            <h3>Fun</h3>
+            <p>Enjoying good moments and making happy memories.</p>
+          </article>
+          <article class="interest">
+            <div class="emoji" aria-hidden="true">💃</div>
+            <h3>Dance</h3>
+            <p>Moving to the music and expressing myself.</p>
+          </article>
+          <article class="interest">
+            <div class="emoji" aria-hidden="true">💖</div>
+            <h3>Everything I love</h3>
+            <p>All the people, moments, and little things that make life lovely.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="connect">
+        <div class="note">
+          <div class="big-heart" aria-hidden="true">💌</div>
+          <h2>Let's stay connected!</h2>
+          <p>Thanks for stopping by my little website. Add your social links below so friends can find you online.</p>
+          <div class="socials">
+            <!-- Replace each # with your own profile URL. Remove any link you don't want to share. -->
+            <a href="#" aria-label="Instagram profile">📸 Instagram</a>
+            <a href="#" aria-label="TikTok profile">🎵 TikTok</a>
+            <a href="#" aria-label="Facebook profile">💬 Facebook</a>
+          </div>
+          <p style="font-size:.8rem; margin-top:14px;">Tip: replace the # in each link with your profile URL before publishing.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Made with <span class="heart">♥</span> by Prakriti · Thanks for visiting!
+  </footer>
+</body>
+</html>
